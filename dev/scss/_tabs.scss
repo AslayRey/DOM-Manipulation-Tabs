@@ -1,0 +1,57 @@
+.tabs {
+    display: block;
+    width: 90%;
+    max-width: 40em;
+    margin:2em auto;
+
+    &_list {
+        list-style-type: none;
+        margin: 0;
+        display: flex;
+    }
+
+    &_item{
+        background-color: $off-white;
+        flex: 1;
+        text-align: center;
+        color: $light-gray;
+        border: 1px solid $light-gray;
+        letter-spacing: 0.075em;
+
+        &:not(:last-of-type) {
+            margin-right: 1em;
+        }
+
+        &.is-active {
+            color: $black;
+            border-top-width: 2px;
+            border-top-color: $accent-color;
+            border-bottom-color: $off-white;
+
+            a { //senza questo, è più carino
+                margin-top: -1px;
+            }
+        }
+
+        a {
+            display: inline-block;
+            padding: 1em;
+            color: inherit;
+        }
+    }
+
+    &_panels {
+        background-color: $off-white;
+        border: 1px solid $light-gray;
+        margin-top: -0.75px;
+    }
+
+    &_panel {
+        display: none;
+        padding: 2em;
+
+        &.is-active {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.accordion {
+    width: 90%;
+    max-width: 40em;
+    margin: 2em auto;
+
+    &_header {
+        margin: 0;
+        transition: background-color 250ms ease;
+        background-color: lighten($light-gray, 10%); //lighten schiarisce il colore della percentuale definita
+        
+        &:hover {
+            background-color: lighten($light-gray, 10%);
+        }
+        a {
+            padding: 0.5em 1em;
+            width: 100%;
+            display: inline-block;
+            font-size: 0.75em;
+            vertical-align: middle;
+            color: $black;
+
+            img {
+                transition: transform 250ms ease;
+                vertical-align: middle;
+            }
+        }
+    
+
+        &.is-active {
+            a {
+                img {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+    }
+
+    &_panel {
+        max-height: 0;
+        overflow: hidden;
+        background-color: $white;
+        transition: max-height 250ms ease;
+        border: 2px solid #FFFFFF;
+        
+        &.is-active {
+            max-height: 15em;
+        }
+    }
+
+    &_paragraph {
+        padding: 1em;
+    }
+}

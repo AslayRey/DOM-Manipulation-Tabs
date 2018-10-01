@@ -4,12 +4,97 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <title>DOM: Tabs</title>
-        <meta name = "viewport" content="width=device-width, initial-scale=1"
+        <meta name = "viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/global.css">
     </head>
     <body>
-        <h1>DOM Manipulation: Tabs</h1>
+        <h1>DOM Manipulation: Tabs</h1> 
 
-        <script src="main.js"></script>
+        <div aria-role="tabs" class="tabs"> <!--aria-role per i non vedenti-->
+            <ul class="tabs_list">
+                <li class="tabs_item is-active"><a href="#privacy">Privacy</a></li> <!--li.tabs_item*4>a-->
+                <li class="tabs_item"><a href="#cookies">Cookies</a></li>
+                <li class="tabs_item"><a href="#spedizioni">Spedizioni</a></li>
+                <li class="tabs_item"><a href="#resi">Resi</a></li>
+            </ul>
+
+
+            <div class="tabs_panels">
+                <div id="privacy" class="tabs_panel is-active">
+                    <h2 class="tabs_title">Privacy</h2>
+                    <p class="tabs_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat inventore quibusdam quo perspiciatis nulla expedita nisi velit repellendus fugiat?</p>
+                </div>
+                <div id="cookies" class="tabs_panel">
+                    <h2 class="tabs_title">Cookies</h2>
+                    <p class="tabs_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat inventore quibusdam quo perspiciatis nulla expedita nisi velit repellendus fugiat?</p>
+                </div>
+                <div id="spedizioni" class="tabs_panel">
+                    <h2 class="tabs_title">Spedizioni</h2>
+                    <p class="tabs_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat inventore quibusdam quo perspiciatis nulla expedita nisi velit repellendus fugiat?</p>
+                </div>
+                <div id="resi" class="tabs_panel"> 
+                    <h2 class="tabs_title">Resi</h2>
+                    <p class="tabs_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat inventore quibusdam quo perspiciatis nulla expedita nisi velit repellendus fugiat?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <h3 class="accordion_header"><a href="#accordion_privacy"><img src="img/chevron-right.svg"/>
+                Privacy</a></h3>
+            <div class="accordion_panel" id="accordion_privacy">
+                <p class="accordion_paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nulla, et maiores cum quae asperiores nam dolore tempora soluta quo.
+                </p>
+            </div>
+            <h3 class="accordion_header"><a href="#accordion_cookies"><img src="img/chevron-right.svg"/>
+                Cookies</a></h3>
+            <div class="accordion_panel" id="accordion_cookies">
+                <p class="accordion_paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nulla, et maiores cum quae asperiores nam dolore tempora soluta quo.
+                </p>
+            </div>
+            <h3 class="accordion_header"><a href="#accordion_spedizioni"><img src="img/chevron-right.svg"/>
+                Spedizioni</a></h3>
+            <div class="accordion_panel" id="accordion_spedizioni">
+                <p class="accordion_paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nulla, et maiores cum quae asperiores nam dolore tempora soluta quo.
+                </p>
+            </div>
+            <h3 class="accordion_header"><a href="#accordion_resi"><img src="img/chevron-right.svg"/>
+                Resi</a></h3>
+            <div class="accordion_panel" id="accordion_resi">
+                <p class="accordion_paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nulla, et maiores cum quae asperiores nam dolore tempora soluta quo.
+                </p>
+            </div>
+        </div>
+
+        <h2>LOADER</h2>
+        <button class="button">Load</button>
+        <div class="loader">
+            <div class="loader_background">
+                <img class="loader_icon" src="img/loader.svg"/>
+            </div>
+        </div>
+
+
+        <h2>MODAL</h2>
+        <button onClick="openModal()" class="button">Cookies</button>
+
+        <div class="modal">
+            <div class="modal_background">
+                <div class="modal_box">
+                    <button onClick="closeModal()" class="modal_close">&times;</button>
+                <h4 class="modal_title">Termini e Condizioni: Cookies</h4>
+                <p class="modal_paragraph">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nemo delectus nulla architecto vero maxime neque esse, placeat minus omnis!
+                </p>
+                <button onClick="closeModal()" class="modal_button">Accetto</button>
+            </div>
+        </div>
+        </div>
+
+        <script src="js/main.js"></script>
     </body>
 </html>
