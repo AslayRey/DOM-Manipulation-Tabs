@@ -1,28 +1,65 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="css/global.css">
-    </head>
-    <body>
-        <div class="main">
-            
-            <h1>Header 1 - H1</h1>
-            <h2>Header 2 - H2</h2>
-            <h3>Header 3 - H3</h3>
-            <h4>Header 4 - H4</h4>
-            <h5>Header 5 - H5</h5>
-            <h6>Header 6 - H6</h6>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>jQuery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
 
-            <p>Anim ex occaecat laboris consequat dolore commodo nostrud consectetur nisi ut dolore ipsum nulla.</p>
+<div class="tabs">
+    <ul class="tabs_list">
+        <li class="tabs_item is-active"><a href="#privacy">Privacy</a></li> <!--li.tabs_item*4>a-->
+        <li class="tabs_item"><a href="#cookies">Cookies</a></li>
+        <li class="tabs_item"><a href="#spedizioni">Spedizioni</a></li>
+        <li class="tabs_item"><a href="#resi">Resi</a></li>
+    </ul>
 
-            <button class="button" type="button">Primary</button>
-            <button class="button" type="button" disabled>Primary disabled</button>
-            <button class="button hollow" type="button">Secondary</button>
-            <button class="button hollow" type="button" disabled>Secondary disabled</button>
-
-            <a href="#">Link</a>
-            <br>
-            <a class="button" href="#">Link</a>
-            
+    <div class="tabs_panels">
+        <div id="privacy" class="tabs_panel is-active">
+            <h2 class="tabs_title">Privacy</h2>
+            <p class="tabs_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat inventore quibusdam quo perspiciatis nulla expedita nisi velit repellendus fugiat?</p>
         </div>
+        <div id="cookies" class="tabs_panel">
+            <h2 class="tabs_title">Cookies</h2>
+            <p class="tabs_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat inventore quibusdam quo perspiciatis nulla expedita nisi velit repellendus fugiat?</p>
+        </div>
+        <div id="spedizioni" class="tabs_panel">
+            <h2 class="tabs_title">Spedizioni</h2>
+            <p class="tabs_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat inventore quibusdam quo perspiciatis nulla expedita nisi velit repellendus fugiat?</p>
+        </div>
+        <div id="resi" class="tabs_panel"> 
+            <h2 class="tabs_title">Resi</h2>
+            <p class="tabs_paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quaerat inventore quibusdam quo perspiciatis nulla expedita nisi velit repellendus fugiat?</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+    
+    <dl class="accordion">
+
+        <dt><a href="">Panel 1</a></dt>
+        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, fuga?</dd>
+        
+        <dt><a href="">Panel 2</a></dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, voluptatem!</dd>
+        
+        <dt><a href="">Panel 3</a></dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, neque.</dd>
+
+        <dt><a href="">Panel 4</a></dt>
+        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, neque.</dd>
+        
+    </dl>
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/main2.js"></script>
+
     </body>
 </html>
